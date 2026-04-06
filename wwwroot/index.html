@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title>Lärplattform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="overlay"></div>
+  <!-- Meny för INLOGGADE -->
+  <div class="topnav logged-in" id="menuLoggedIn" style="display: none;">
+    <h1 class="logo">Learn Math</h1>
+    <div class="menu-right">
+      <a href="#" data-section="workplan">Education plan</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Grade <span class="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="#" data-section="arskurs1">4th Grade</a>
+          <a href="#" data-section="arskurs2">5th Grade</a>
+        </div>
+      </div>
+      <a href="#" data-section="home" class="active">Home</a>
+      <button class="openbtn">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- Meny för UTLOGGADE -->
+  <div class="topnav logged-out" id="menuLoggedOut" style="display: none;">
+    <h1 class="logo">Learn Math</h1>
+    <div class="menu-right">
+      <a href="#" data-section="gettStarted">Get started</a>
+      <a href="#" data-section="login">Login</a>
+      <a href="#" data-section="home" class="active">Home</a>
+      <button class="openbtn">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <div id="sidebar-links"></div>
+  </div>
+
+  <!-- Innehåll -->
+  <div id="main">
+  <div id="home" class="section" style="display: block;">
+    <!-- Hero-sektion -->
+    <section class="home-hero">
+      <h1>Welcome to Learn Math!</h1>
+      <p>Discover, practice, and master mathematics step by step with interactive lessons and personalized learning plans.</p>
+    </section>
+
+    <!-- Features / Syfte -->
+    <section class="home-features">
+      <div class="feature-card">
+        <h3>Interactive Lessons</h3>
+        <p>Learn math concepts with step-by-step explanations, examples, and exercises.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Personalized Plans</h3>
+        <p>Create your own learning plan by choosing chapters and topics you want to improve.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Track Your Progress</h3>
+        <p>Follow your weekly progress and strengthen your skills with targeted exercises.</p>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="home-cta">
+      <h2>Start your math journey today!</h2>
+      <p>Sign up for free and explore chapters that match your learning needs.</p>
+    </section>
+  </div>
+
+    <div id="workplan" class="section">
+      <div id="chapter-grid" class="chapter-grid"></div>
+          <!-- Inlärningsmaterial-visning -->
+      <div id="materialContainer" class="material-container" style="display:none;">
+        <div class="material-content">
+          <h2 id="materialTitle"></h2>
+          <div id="materialText"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="arskurs1" class="section">
+      <div id="container-arskurs" class="arskurs-yta">
+        <h1>First grade</h1>
+        <p>
+          Here you’ll find all the math materials for Grade 1 – exercises, chapters, and tasks that help you develop your skills step by step. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. 
+          Praesent libero. Sed cursus ante dapibus diam.
+        </p>
+      </div>
+      <div class="kapitel-grid">
+        <a href="#" class="kapitel-card">
+          <img src="panelBild1.PNG" alt="Kapitel 1">
+          <h3>Chapter 1</h3>
+          <p>Numbers and calculation</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild2.PNG" alt="Kapitel 2">
+          <h3>Chapter 2</h3>
+          <p>Geometry</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild3.PNG" alt="Kapitel 3">
+          <h3>Chapter 3</h3>
+          <p>Fractions and percentages</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild4.PNG" alt="Kapitel 4">
+          <h3>Chapter 4</h3>
+          <p>Algebra</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild5.PNG" alt="Kapitel 5">
+          <h3>Chapter 5</h3>
+          <p>Statistics</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild6.PNG" alt="Kapitel 6">
+          <h3>Chapter 6</h3>
+          <p>Functions</p>
+        </a>
+      </div>
+
+    </div>
+    <div id="arskurs2" class="section">
+      <div id="container-arskurs" class="arskurs-yta">
+        <h1>Second grade</h1>
+        <p>
+          Here you will find all the mathematics material for Year 2 – exercises, chapters, and tasks that help you develop your skills step by step.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. 
+          Praesent libero. Sed cursus ante dapibus diam.
+        </p>
+      </div>
+      <div class="kapitel-grid">
+        <a href="#" class="kapitel-card">
+          <img src="panelBild1.PNG" alt="Kapitel 1">
+          <h3>Chapter 1</h3>
+          <p>Numbers and calculation</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild2.PNG" alt="Kapitel 2">
+          <h3>Chapter 2</h3>
+          <p>Geometry</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild3.PNG" alt="Kapitel 3">
+          <h3>Chapter 3</h3>
+          <p>Fractions and percentages</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild4.PNG" alt="Kapitel 4">
+          <h3>Chapter 4</h3>
+          <p>Algebra</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild5.PNG" alt="Kapitel 5">
+          <h3>Chapter 5</h3>
+          <p>Statistics</p>
+        </a>
+        <a href="#" class="kapitel-card">
+          <img src="panelBild6.PNG" alt="Kapitel 6">
+          <h3>Chapter 6</h3>
+          <p>Functions</p>
+        </a>
+      </div>
+    </div>
+    <div id="kontakt" class="section">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p class="intro">
+          Have questions or need help? Reach out to us and we'll get back to you as soon as possible!
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p>info@learnmath.se</p>
+          </div>
+          <div class="contact-card">
+            <h3>Phone</h3>
+            <p>+46 70 123 4567</p>
+          </div>
+          <div class="contact-card">
+            <h3>Address</h3>
+            <p>Math Street 42, 111 22 Stockholm, Sweden</p>
+          </div>
+        </div>
+
+        <h3>Send us a message</h3>
+        <form id="contactForm" class="contact-form">
+          <div class="input-container">
+            <input type="text" name="name" required>
+            <label>Name</label>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-container">
+            <textarea name="message" rows="5" required></textarea>
+            <label>Message</label>
+          </div>
+          <button type="submit" class="continue-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="omoss" class="section">
+      <div class="about-container">
+        <h2>About Learn Math</h2>
+        <p class="intro">
+          We make math more fun and approachable! Our mission is to help students understand concepts step by step, with engaging materials and personalized learning plans.
+        </p>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Our Mission</h3>
+            <p>To inspire students to enjoy learning math by providing interactive and clear resources.</p>
+          </div>
+          <div class="value-card">
+            <h3>Our Vision</h3>
+            <p>To become the most engaging digital math platform for students worldwide.</p>
+          </div>
+          <div class="value-card">
+            <h3>Our Team</h3>
+            <p>Passionate educators and developers who love math and learning.</p>
+          </div>
+        </div>
+
+        <h3>Meet Our Team</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <h4>Alice Johnson</h4>
+            <p>Math Teacher & Curriculum Designer</p>
+          </div>
+          <div class="team-member">
+            <h4>Bob Smith</h4>
+            <p>Front-End Developer</p>
+          </div>
+          <div class="team-member">
+            <h4>Clara Lee</h4>
+            <p>Content Creator & Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gettStarted" class="section">
+      <!-- Panel som öppnas -->
+      <div class="panel active" id="homePanel">
+        <div class="panel__content">
+          <h1>Create an account!</h1>
+            <p>Follow the steps below to create an account with a tailored learning plan just for you.</p>
+              <ol>
+                <li>Fill in your information and log in through your school email account.</li>
+                <li>Choose the chapters from the math book that you want to improve in.</li>
+                <li>After creating your account, you can begin your learning journey.</li>
+              </ol>
+          <button class="continue-btn" onclick="openPanel('chapterPanel')">Continue</button>
+        </div>
+      </div>
+
+        <!-- Panel: Välj kapitel -->
+      <div class="panel" id="chapterPanel">
+        <div class="panel__content">
+          <h2>Click on the chapters you want to study more.</h2>
+
+          <div class="image-grid">
+            <a href="#" class="image-card">
+              <img src="panelBild1.PNG" alt="Kapitel 1">
+              <p>Chapter 1: Numbers and calculation</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild2.PNG" alt="Kapitel 2">
+              <p>Chapter 2: Geometry</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild3.PNG" alt="Kapitel 3">
+              <p>Chapter 3: Fractions and percentages</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild4.PNG" alt="Kapitel 4">
+              <p>Chapter 4: Algebra</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild5.PNG" alt="Kapitel 5">
+              <p>Chapter 5: Statistics</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild6.PNG" alt="Kapitel 6">
+              <p>Chapter 6: Functions</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild7.PNG" alt="Kapitel 7">
+              <p>Chapter 7: Probability</p>
+            </a>
+            <a href="#" class="image-card">
+              <img src="panelBild8.PNG" alt="Kapitel 8">
+              <p>Chapter 8: Problem Solving</p>
+            </a>
+          </div>
+
+          <button class="continue-btn" onclick="checkChapter()">Continue</button>
+        </div>
+      </div>
+
+      <div class="panel" id="secondPanel">
+                  
+        <div class="panel__content">
+          <form id="registerForm">
+          <h2>Fill in your information</h2>
+
+            <div class="input-container">
+              <input type="text" name="name" required />
+              <label>Name</label>		
+            </div>
+
+            <div class="input-container">
+              <input type="text" name="surname" required />
+              <label>Surname</label>		
+            </div>
+
+            <div class="input-container">		
+              <input type="email" name="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="input-container">		
+              <input type="password" name="password" required />
+              <label>Password</label>
+            </div>
+
+            <div class="input-container">
+              <select name="grade" required>
+                <option value="" disabled selected hidden>Choose grade</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="continue-btn">Create account</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="login" class="section">
+      <div class="panel" id="loginPanel">                 
+        <div class="panel__content">
+          <form id="loginForm">
+          <h2>Fill in the requested information.</h2>
+
+            <div class="input-container">		
+              <input type="email" name="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="input-container">		
+              <input type="password" name="password" required />
+              <label>Password</label>
+            </div>
+
+            
+            <button type="submit" class="continue-btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  <script>
+    let isLoggedIn = false;
+
+    function updateMenu() {
+      const menuLoggedIn = document.getElementById("menuLoggedIn");
+      const menuLoggedOut = document.getElementById("menuLoggedOut");
+      const sidebarLinks = document.getElementById("sidebar-links");
+
+      if (isLoggedIn) {
+        // ✅ VISA rätt meny
+        menuLoggedIn.style.display = "flex";
+        menuLoggedOut.style.display = "none";
+
+        sidebarLinks.innerHTML = `
+          <a href="#" data-section="home">Home</a>
+          <a href="#" data-section="workplan">Education plan</a>
+          <a href="#" data-section="arskurs1">4th Grade</a>
+          <a href="#" data-section="arskurs2">5th Grade</a>
+          <a href="#" data-section="omoss">About us</a>
+          <a href="#" data-section="kontakt">Contact</a>
+          <a href="#" data-section="loggaut">Logout</a>
+        `;
+      } else {
+        // ✅ VISA rätt meny
+        menuLoggedIn.style.display = "none";
+        menuLoggedOut.style.display = "flex";
+
+        sidebarLinks.innerHTML = `
+          <a href="#" data-section="home">Home</a>
+          <a href="#" data-section="gettStarted">Get started</a>
+          <a href="#" data-section="login">Login</a>
+          <a href="#" data-section="omoss">About us</a>
+          <a href="#" data-section="kontakt">Contact</a>
+        `;
+      }
+
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById('home').style.display = 'block';
+    }
+
+
+    //kollar så att mailadressen och lösenordet stämmer
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    console.log("Login form submitted");
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const data = {
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+
+    try {
+      const response = await fetch('/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        const err = await response.json();
+        alert(err.error);
+        return;
+      }
+
+      const result = await response.json();
+      console.log('Logged in user:', result.user);
+      closePanel();
+
+      isLoggedIn = true;
+      updateMenu();
+      setActiveMenu("workplan");
+      loadUserChapters(result.user.email);
+
+    } catch (err) {
+      console.error(err);
+      alert('Login failed');
+    }
+    });
+
+
+    //loggar in och tar användaren till rätt meny
+    document.addEventListener("DOMContentLoaded", () => {
+      updateMenu();
+    });
+
+    document.querySelectorAll('.openbtn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // stoppar att dokument-lyssnaren stänger direkt
+        openNav();
+      });
+    });
+
+    function openNav() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.classList.add("open");
+      //Aktiverar css koden som gömmer topnav länkarna
+      document.body.classList.add("sidebar-open");
+    }
+
+    function closeNav() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.classList.remove("open");
+      //Avaktiverar css koden som gömmer topnav länkarna
+      document.body.classList.remove("sidebar-open");
+    }
+
+    document.addEventListener('click', function(e) {
+      const sidebar = document.getElementById('mySidebar');
+      const openBtn = document.querySelector('.openbtn');
+
+      // Stäng sidebar om den är öppen
+      if (sidebar.classList.contains('open')) {
+        // Klick utanför sidebar och openBtn
+        if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
+          sidebar.classList.remove('open');
+          document.body.classList.remove('sidebar-open');
+        }
+      }
+    });
+
+
+
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.topnav a[data-section], .sidebar a[data-section]')) {
+        const sectionId = e.target.getAttribute('data-section');
+
+        if (sectionId === "loggaut") {
+          e.preventDefault();
+
+          isLoggedIn = false;
+          selectedChapters = [];
+
+          // Stäng alla paneler & material
+          document.querySelectorAll('.section').forEach(section => {
+            section.style.display = 'none';
+          });
+          document.getElementById('home').style.display = 'block';
+
+          updateMenu();
+          closeNav();
+          return;
+        }
+
+
+        e.preventDefault();
+
+        document.querySelectorAll('.section').forEach(section => {
+          section.style.display = 'none';
+        });
+
+        document.getElementById(sectionId).style.display = 'block';
+
+        document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+        e.target.classList.add('active');
+
+        
+        if (sectionId === "gettStarted") {
+          // Visa första panelen direkt
+          openPanel("homePanel");
+        }
+
+        if (sectionId === "login") {
+          openPanel("loginPanel")
+        }
+
+        closeNav();
+      }
+    });
+
+    document.querySelectorAll('.logo').forEach(logo => {
+      logo.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+        document.getElementById('home').style.display = 'block';
+      });
+    });
+
+    // Dropdown på klick
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdownContent = btn.nextElementSibling;
+        
+        // Stäng alla andra dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(dc => {
+          if (dc !== dropdownContent) {
+            dc.style.opacity = 0;
+            dc.style.visibility = 'hidden';
+            dc.style.pointerEvents = 'none';
+            dc.previousElementSibling.classList.remove('open');
+          }
+        });
+
+        // Toggle denna dropdown
+        if (dropdownContent.style.opacity === '1') {
+        dropdownContent.style.opacity = 0;
+        dropdownContent.style.visibility = 'hidden';
+        dropdownContent.style.pointerEvents = 'none';
+        btn.classList.remove('open');
+        } else {
+        dropdownContent.style.opacity = 1;
+        dropdownContent.style.visibility = 'visible';
+        dropdownContent.style.pointerEvents = 'auto';
+        btn.classList.add('open');
+        }
+    });
+    });
+
+    // Klick utanför dropdown stänger den
+    document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-content').forEach(dc => {
+        dc.style.opacity = 0;
+        dc.style.visibility = 'hidden';
+        dc.style.pointerEvents = 'none';
+        dc.previousElementSibling.classList.remove('open');
+        });
+    }
+    });
+
+    function openPanel(id) {
+      // Stäng andra paneler
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      
+      // Visa vald panel
+      const panel = document.getElementById(id);
+      panel.style.display = "flex"; // måste sättas innan animation
+      setTimeout(() => panel.classList.add('active'), 10); // delay för transition
+
+      // Overlay
+      const overlay = document.getElementById("overlay");
+      overlay.style.display = "block";
+      setTimeout(() => overlay.classList.add("active"), 10);
+
+      document.body.classList.add('no-scroll');
+    }
+
+    function closePanel() {
+      // Stäng paneler med fade
+      const panels = document.querySelectorAll('.panel');
+      panels.forEach(p => p.classList.remove('active'));
+
+      // Overlay fade out
+      const overlay = document.getElementById("overlay");
+      overlay.classList.remove("active");
+
+      // Vänta tills animationen är klar innan display: none
+      setTimeout(() => {
+        panels.forEach(p => p.style.display = "none");
+        overlay.style.display = "none";
+        document.body.classList.remove('no-scroll');
+      }, 300); // matchar CSS transition-duration
+    }
+
+
+
+    document.querySelectorAll('.image-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const chapterName = card.querySelector('p').textContent;
+
+        card.classList.toggle('selected');
+
+        if (card.classList.contains('selected')) {
+          selectedChapters.push(chapterName);
+        } else {
+          selectedChapters = selectedChapters.filter(ch => ch !== chapterName);
+        }
+      });
+    });
+
+    function checkChapter() {
+      if (selectedChapters.length < 3) {
+        alert("Välj minst 3 kapitel innan du fortsätter!");
+        return;
+      }
+
+      // Om tillräckligt många valts, öppna register-panelen
+      openPanel('secondPanel');
+    }
+
+    function finishSignup() {
+      isLoggedIn = true;
+      updateMenu();
+
+      const grid = document.getElementById('chapter-grid');
+      grid.innerHTML = ''; // Töm tidigare kort om det finns
+
+      selectedChapters.forEach((chapter, index) => {
+        const card = document.createElement('div');
+        card.classList.add('chapter-card');
+        card.innerHTML = `
+          <h3>${chapter}</h3>
+          <p><strong>Week ${index + 1}</strong></p>
+          <button class="show-material-btn" data-chapter="${chapter}">Show material</button>
+        `;
+        grid.appendChild(card);
+      });
+
+      
+      document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+      document.getElementById('workplan').style.display = 'block';
+
+      
+      document.querySelectorAll('.topnav a').forEach(link => link.classList.remove('active'));
+      document.querySelector('.topnav.logged-in a[data-section="workplan"]').classList.add('active');
+
+      closePanel();
+    }
+
+    function setActiveMenu(sectionId) {
+      document.querySelectorAll('.topnav a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      const activeLink = document.querySelector(
+        `.topnav.logged-in a[data-section="${sectionId}"]`
+      );
+
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+
+
+
+    // Enkla exempel på inlärningsmaterial
+    const materialData = {
+      "Chapter 1: Numbers and Counting": `
+        <h3>Numbers and Counting</h3>
+        <p>Here you will learn the basics of number sense, addition, and subtraction.</p>
+        <ul>
+          <li>🎯 Understand numbers up to 1000</li>
+          <li>🧮 Addition and subtraction with tens</li>
+          <li>📝 Practice exercise: Calculate 25 + 47</li>
+        </ul>
+      `,
+      "Chapter 2: Geometry": `
+        <h3>Geometry</h3>
+        <p>Explore shapes, angles, and measurements.</p>
+        <ul>
+          <li>📐 Learn to recognize different geometric figures</li>
+          <li>📏 Measure lengths and perimeters</li>
+          <li>🔺 Draw your own triangles</li>
+        </ul>
+      `,
+      "Chapter 3: Fractions and Percentages": `
+        <h3>Fractions and Percentages</h3>
+        <p>Understand parts of a whole and the relationship between fractions and percentages.</p>
+        <ul>
+          <li>🍰 What does 1/2 mean?</li>
+          <li>💯 50% = 1/2</li>
+          <li>🧠 Practice converting between fractions and percentages</li>
+        </ul>
+      `
+      ,
+      "Chapter 4: Algebra": `
+        <h3>Algebra</h3>
+        <p>Learn how to work with variables, expressions, and simple equations.</p>
+        <ul>
+          <li>🔤 What is a variable?</li>
+          <li>➗ Solve simple equations like x + 5 = 12</li>
+          <li>🧠 Practice using formulas</li>
+        </ul>
+      `,
+      "Chapter 5: Statistics": `
+        <h3>Statistics</h3>
+        <p>Learn how to collect, read, and analyze data.</p>
+        <ul>
+          <li>📊 Read tables and charts</li>
+          <li>📈 Mean, median, and mode</li>
+          <li>📝 Create your own data set</li>
+        </ul>
+      `,
+      "Chapter 6: Functions": `
+        <h3>Functions</h3>
+        <p>Understand how functions describe relationships between values.</p>
+        <ul>
+          <li>🔁 What is a function?</li>
+          <li>📉 Explore graphs of functions</li>
+          <li>🧮 Calculate values using simple functions</li>
+        </ul>
+      `
+      ,      "Chapter 7: Probability": `
+        <h3>Probability</h3>
+        <p>Learn how to predict outcomes and understand chance.</p>
+        <ul>
+          <li>🎲 What is probability?</li>
+          <li>📊 Calculate the chance of simple events</li>
+          <li>🧠 Practice with dice and coin flips</li>
+        </ul>
+      `,
+      "Chapter 8: Problem Solving": `
+        <h3>Problem Solving</h3>
+        <p>Develop strategies to solve mathematical problems step by step.</p>
+        <ul>
+          <li>🧩 Break problems into smaller parts</li>
+          <li>🧠 Choose the right strategy</li>
+          <li>✏️ Practice solving real-world problems</li>
+        </ul>
+      `
+    };
+
+    // Lyssna på alla "Visa material"-knappar
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('show-material-btn')) {
+        const chapter = e.target.getAttribute('data-chapter');
+        showMaterial(chapter);
+      }
+    });
+
+    //Hämtar och visar kapitel
+    async function loadUserChapters(email) {
+      try {
+        const response = await fetch(`/auth/user-chapters?email=${encodeURIComponent(email)}`);
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Failed to load chapters');
+
+        const chapters = data.chapters;
+
+        selectedChapters = chapters;
+
+        const grid = document.getElementById('chapter-grid');
+        grid.innerHTML = ''; // töm tidigare kort
+
+        chapters.forEach((chapter, index) => {
+          const card = document.createElement('div');
+          card.classList.add('chapter-card');
+          card.innerHTML = `
+            <h3>${chapter}</h3>
+            <p><strong>Week ${index + 1}</strong></p>
+            <button class="show-material-btn" data-chapter="${chapter}">Show material</button>
+          `;
+          grid.appendChild(card);
+        });
+
+        // Visa arbetsplan-sektionen
+        document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+        document.getElementById('workplan').style.display = 'block';
+
+      } catch (err) {
+        console.error(err);
+        alert('Could not load user chapters');
+      }
+    }
+
+
+
+    function showMaterial(chapter) {
+      const container = document.getElementById('materialContainer');
+      const title = document.getElementById('materialTitle');
+      const text = document.getElementById('materialText');
+
+      // Visa rätt material
+      title.textContent = chapter;
+      text.innerHTML = materialData[chapter] || "<p>The material is missing for this chapter.</p>";
+
+      // Lägg till fade-in klass
+      container.style.display = 'block';
+      container.classList.remove('fade-in'); // nollställ tidigare animation
+      void container.offsetWidth; // tvingar omritning för att animationen ska triggas igen
+      container.classList.add('fade-in');
+
+      // Vänta lite innan scroll, så layouten hinner uppdateras
+      setTimeout(() => {
+        window.scrollTo({
+          top: container.offsetTop,
+          behavior: 'smooth'
+        });
+      }, 20);
+    }
+
+
+    let selectedChapters = [];
+
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+
+      const data = {
+        name: formData.get('name'),
+        surname: formData.get('surname'),
+        email: formData.get('email'),
+        password: formData.get('password'),
+        grade: formData.get('grade'),
+        chapters: selectedChapters
+      };
+
+      try {
+        const response = await fetch('/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+          const err = await response.json();
+          alert(err.error || 'Registration failed');
+          return;
+        }
+
+        const result = await response.json();
+        console.log('Registered user:', result.user);
+
+        // loggar in
+        isLoggedIn = true;
+        updateMenu();
+
+        //skapar arbetsplan
+        finishSignup();
+
+        closePanel();
+
+      } catch (err) {
+        console.error(err);
+        alert('Registration failed');
+      }
+    });
+
+    // AI för senare användning
+    /*async function ask() {
+      if (!selectedChapters || selectedChapters.length === 0) {
+        alert("No chapters selected for AI");
+        return;
+      }
+
+      const response = await fetch("/ai-study-coach", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chapters: selectedChapters,
+          goal: "Get a good grade in math"
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error(data);
+        alert(data.error || "AI failed");
+        return;
+      }
+
+      document.getElementById("aiResponse").innerText = data.advice;
+    }*/
+
+  </script>
+</body>
+</html>
